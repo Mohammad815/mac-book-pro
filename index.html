@@ -20,43 +20,43 @@
                 <div class="col">
                     <div class="mt-5">
                         <h1>Memory</h1>
-                        <button type="button" class="btn btn-secondary btn-lg">8GB Unified Memory</button>
-                        <button type="button" class="btn btn-secondary btn-lg">16GB Unified Memory</button>
+                        <button type="button" class="btn btn-secondary btn-lg" id="memory1-cost">8GB Unified Memory</button>
+                        <button type="button" id="memory2-cost" class="btn btn-secondary btn-lg">16GB Unified Memory</button>
                     </div>
                     <div class="mt-5">
                         <h1>Storage</h1>
-                        <button type="button" class="btn btn-secondary btn-lg">256GB SSD Storage</button>
-                        <button type="button" class="btn btn-secondary btn-lg">512GB SSD Storage</button>
-                        <button type="button" class="btn btn-secondary btn-lg">1TB SSD Storage</button>
+                        <button type="button" class="btn btn-secondary btn-lg" id="storage1-cost">256GB SSD Storage</button>
+                        <button type="button" class="btn btn-secondary btn-lg" id="storage2-cost">512GB SSD Storage</button>
+                        <button type="button" class="btn btn-secondary btn-lg" id="storage3-cost">1TB SSD Storage</button>
                     </div>
                     <div class="mt-5">
                         <h1>Choose Your Delivery Option</h1>
-                        <button type="button" class="btn btn-secondary btn-lg">Friday Aug 25 Free Delivery</button>
-                        <button type="button" class="btn btn-secondary btn-lg">Friday, Aug 25 Delivery Charge $20</button>
+                        <button type="button" class="btn btn-secondary btn-lg" id="free-cost">Friday Aug 25 Free Delivery</button>
+                        <button type="button" class="btn btn-secondary btn-lg" id="charge-cost">Friday, Aug 25 Delivery Charge $20</button>
                     </div>
                     <div class="mt-5">
                         <table class="table">
                             
                             <tbody>
                               <tr>
-                                  <td><h3>Best Price:      $1299</h3></td>
+                                  <td><h3>Best Price:      $ <span id="common-cost">1299</span></h3></td>
                                   
                               </tr>
                               <tr>
-                                  <td><h3>Extra Memory cost  : $0</h3></td>
+                                  <td><h3>Extra Memory cost  : $ <span id="memory-cost">0</span></h3></td>
                                   
                               </tr>
                               <tr>
-                                  <td><h3>Extra Storage Cost : $0</h3></td>
+                                  <td><h3>Extra Storage Cost : $ <span id="storage-cost">0</span></h3></td>
                                   
                               </tr>
                               <tr>
-                                  <td><h3>Delivery Charge  : $0</h3></td>
+                                  <td><h3>Delivery Charge  : $ <span id="delivery-cost">0</span></h3></td>
                                   
                               </tr>
                             </tbody>
                             <tfoot>
-                                <td><h3>Total Price:  $1299</h3></td>
+                                <td><h3>Total Price:  $ <span id="total-cost">1299</span></h3></td>
                             </tfoot>
                           </table> 
                     </div>
@@ -64,7 +64,7 @@
              </div>
         </section>
     </main>
-
+    <script src="index.js"></script>
 
 
 
