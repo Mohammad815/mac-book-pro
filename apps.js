@@ -10,7 +10,7 @@ document.getElementById("memory2-cost").addEventListener('click',function(){
     updateTotal();
 })
 // Storage Section 
-z=document.getElementById("storage1-cost").addEventListener('click',function(){
+document.getElementById("storage1-cost").addEventListener('click',function(){
     storageCost.innerText = 0;
     updateTotal();
 })
@@ -50,12 +50,12 @@ function updateTotal(){
     totalAmount.innerText = grandTotal;
     return grandTotal;
 }
+// Apply Promocode
 function applyPromoCode(){
     const amount = updateTotal();
     const commission = amount * (20/100);
     const inputField = document.getElementById('inputfield');
     const inpultvalue = inputField.value;
-    console.log(inpultvalue)
     if(inpultvalue == 'stevekaku'){
         totalAmount.innerText = amount-commission;
     }   
@@ -66,9 +66,8 @@ function applyPromoCode(){
     return totalAmount.innerText;
 }
 
-const common = document.getElementById("common-cost")
-//console.log(common)
-const memoryCost = document.getElementById("memory-cost")
-const storageCost = document.getElementById("storage-cost")
-const deliveryCost = document.getElementById("delivery-cost")
-const totalCost = document.getElementById("total-cost")
+const common = document.getElementById("common-cost");
+const memoryCost = document.getElementById("memory-cost");
+const storageCost = document.getElementById("storage-cost");
+const deliveryCost = document.getElementById("delivery-cost");
+const totalCost = document.getElementById("total-cost");
