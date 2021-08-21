@@ -36,15 +36,7 @@ document.getElementById("charge-cost").addEventListener("click",function(){
 
 // Working Apply Button
 document.getElementById("apply").addEventListener('click',function(){
-    // let x = updateTotal().value;
-    // let commision = x * 2;
-    // console.log(commision);
-    const inputField = document.getElementById('inputfield');
-    if(inputField == 'stevekaku'){
-
-    }
-
-    
+    applyPromoCode();   
 })
 // Add Total cost
 function updateTotal(){
@@ -55,16 +47,23 @@ function updateTotal(){
     const grandTotal= bestPrice +  memoryPrice + storagePrice + devliveryPrice;
     totalCost.innerText = grandTotal;
     const totalAmount = document.getElementById("totalAmount");
-    const inputField = document.getElementById('inputfield');
-    if(inputField == 'stevekaku'){
-
-    }
     totalAmount.innerText = grandTotal;
-    
+    return grandTotal;
 }
-function promocode(){
-
-
+function applyPromoCode(){
+    const amount = updateTotal();
+    const commission = amount * (20/100);
+    const inputField = document.getElementById('inputfield');
+    const inpultvalue = inputField.value;
+    console.log(inpultvalue)
+    if(inpultvalue == 'stevekaku'){
+        totalAmount.innerText = amount-commission;
+    }   
+    else{
+        totalAmount.innerText = amount;
+    }
+    inputField.value='';
+    return totalAmount.innerText;
 }
 
 const common = document.getElementById("common-cost")
