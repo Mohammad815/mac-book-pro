@@ -1,10 +1,3 @@
-// // Select Except click Sector 
-// const common = document.getElementById("common-cost")
-// //console.log(common)
-// const memoryCost = document.getElementById("memory-cost")
-// const storageCost = document.getElementById("storage-cost")
-// const deliveryCost = document.getElementById("delivery-cost")
-// const totalCost = document.getElementById("total-cost")
 
 // Memory Section
 document.getElementById("memory1-cost").addEventListener('click',function(){
@@ -41,6 +34,19 @@ document.getElementById("charge-cost").addEventListener("click",function(){
     updateTotal();
 })
 
+// Working Apply Button
+document.getElementById("apply").addEventListener('click',function(){
+    // let x = updateTotal().value;
+    // let commision = x * 2;
+    // console.log(commision);
+    const inputField = document.getElementById('inputfield');
+    if(inputField == 'stevekaku'){
+
+    }
+
+    
+})
+// Add Total cost
 function updateTotal(){
     const bestPrice = parseInt(common.innerText);
     const memoryPrice = parseInt(memoryCost.innerText);
@@ -48,6 +54,17 @@ function updateTotal(){
     const devliveryPrice = parseInt(deliveryCost.innerText);
     const grandTotal= bestPrice +  memoryPrice + storagePrice + devliveryPrice;
     totalCost.innerText = grandTotal;
+    const totalAmount = document.getElementById("totalAmount");
+    const inputField = document.getElementById('inputfield');
+    if(inputField == 'stevekaku'){
+
+    }
+    totalAmount.innerText = grandTotal;
+    
+}
+function promocode(){
+
+
 }
 
 const common = document.getElementById("common-cost")
